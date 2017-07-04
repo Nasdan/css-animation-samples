@@ -1,0 +1,16 @@
+@keyframes rainbow {
+  0% {
+    fill: blue;
+    transform: translatex(0px);
+  }
+
+  50% {
+    fill: purple;
+    transform: translatex(50px);
+  }
+
+  100% {
+    fill: red;
+    transform: translatex(100px);
+  }
+}

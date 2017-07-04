@@ -1,0 +1,12 @@
+@import '~globalStyles/animations/rainbow';
+
+.circle {
+  fill: black;
+  animation-name: rainbow;
+  animation-duration: 2s;
+  animation-delay: 2s;
+  animation-iteration-count: 3;
+  animation-direction: alternate;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}

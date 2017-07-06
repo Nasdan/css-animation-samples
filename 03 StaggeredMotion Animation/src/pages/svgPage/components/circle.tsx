@@ -1,6 +1,7 @@
 import * as React from 'react';
 
 interface Props {
+  x: number;
   y: number;
   className?: string;
   translateX?: string;
@@ -12,7 +13,7 @@ export const Circle: React.StatelessComponent<Props> = (props) => {
   return (
     <circle
       className={props.className}
-      cx={45}
+      cx={props.x}
       cy={props.y}
       r={25}
       transform={props.translateX}

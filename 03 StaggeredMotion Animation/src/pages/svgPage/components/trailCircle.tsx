@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { RainbowAnimation } from '../../../common/components/animations';
+import { RainbowAnimation, TrailAnimation } from '../../../common/components/animations';
 import { Circle } from './circle';
 
 interface Props {
@@ -11,9 +11,9 @@ interface State {
   startAnimation: boolean;
 }
 
-const RenderRainbowCirle = RainbowAnimation(Circle);
+const RenderTrailCirle = TrailAnimation(Circle);
 
-export class RainbowCircle extends React.Component<Props, State> {
+export class TrailCircle extends React.Component<Props, State> {
   constructor() {
     super();
     this.state = {
@@ -29,7 +29,7 @@ export class RainbowCircle extends React.Component<Props, State> {
 
   render() {
     return (
-      <RenderRainbowCirle
+      <RenderTrailCirle
         className="cursor-pointer"
         onClick={this.onClick}
         startAnimation={this.state.startAnimation}

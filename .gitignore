@@ -11,4 +11,4 @@ typings/
 yarn.lock
 .awcache/
 public/
-00 Boilerplate/package-lock.json
+package-lock.json

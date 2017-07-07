@@ -1,1 +1,1 @@
-export const viewBox = '0 0 200 500';
+export const viewBox = '0 0 200 600';

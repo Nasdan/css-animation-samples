@@ -17,16 +17,16 @@ export const SVGPageComponent: React.StatelessComponent<{}> = (props) => {
           >
             <Circle
               x={45}
-              y={5}
+              y={25}
               className={animationStyles.rainbowAnimation}
             />
             <RainbowCircle
               x={45}
-              y={55}
+              y={75}
             />
             <TrailCircle
               x={45}
-              y={105}
+              y={125}
             />
           </svg>
         )}

@@ -1,2 +1,2 @@
 export * from './rainbow';
-export * from './trail';
+export * from './path';

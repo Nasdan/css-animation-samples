@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { AutoSizer } from 'react-virtualized';
 import { viewBox } from './constants';
-import { Circle, RainbowCircle, TrailCircle } from './components';
+import { Circle, RainbowCircle, PathAnimatedCircle } from './components';
 const styles: any = require('./page.scss');
 const animationStyles: any = require('../../content/sass/animations/rainbow.scss');
 
@@ -24,7 +24,7 @@ export const SVGPageComponent: React.StatelessComponent<{}> = (props) => {
               x={45}
               y={75}
             />
-            <TrailCircle
+            <PathAnimatedCircle
               x={45}
               y={125}
             />

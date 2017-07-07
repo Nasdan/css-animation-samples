@@ -8,7 +8,7 @@ interface Props {
 
 const getAnimationStyles = (props: Props) => (
   {
-    x: spring(getXValue(props), { stiffness: 300, damping: 50 }),
+    x: spring(getXValue(props), { stiffness: 300, damping: 47 }),
     y: spring(getYValue(props), { stiffness: 80, damping: 50 }),
   }
 );
@@ -21,17 +21,11 @@ const getXValue = (props): number => (
 
 const getYValue = (props): number => (
   props.startAnimation ?
-    100 :
+    300 :
     0
 );
 
-const getX2LineValue = (initalXValue, currentXValue) => (
-  currentXValue > initalXValue ?
-    currentXValue + initalXValue :
-    initalXValue
-);
-
-export const TrailAnimation = (Component) =>
+export const PathAnimation = (Component) =>
   AnimationComponent((props) => (
     <Motion
       style={getAnimationStyles(props)}

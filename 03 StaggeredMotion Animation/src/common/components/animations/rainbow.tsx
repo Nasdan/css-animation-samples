@@ -39,7 +39,7 @@ export const RainbowAnimation = (Component) =>
       {({ xSpring, colorSpring }) => (
         <Component
           {...props}
-          translateX={`translate(${xSpring})`}
+          translate={`translate(${xSpring})`}
           fill={scaleColorSpring(colorSpring)}
         />
       )}

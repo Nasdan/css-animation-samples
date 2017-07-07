@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { Motion, spring, presets, SpringHelperConfig } from 'react-motion';
 import * as chroma from 'chroma-js';
+import { AnimationComponent } from './animation';
 
 interface Props {
   startAnimation: boolean;
@@ -8,7 +9,7 @@ interface Props {
 
 const animationConfig: SpringHelperConfig = {
   stiffness: 25,
-  damping: 5,
+  damping: 1,
 };
 
 const getAnimationStyle = (props: Props) => (
@@ -32,20 +33,15 @@ const getColorValue = (props: Props): number => (
 
 const scaleColorSpring = chroma.bezier(['blue', 'red']);
 
-export const RainbowAnimation = (Component) => (
-  class extends React.Component<any, {}> {
-    render() {
-      return (
-        <Motion style={getAnimationStyle(this.props)}>
-          {({ xSpring, colorSpring }) => (
-            <Component
-              {...this.props}
-              translateX={`translate(${xSpring})`}
-              fill={scaleColorSpring(colorSpring)}
-            />
-          )}
-        </Motion>
-      );
-    }
-  }
-);
+export const RainbowAnimation = (Component) =>
+  AnimationComponent((props) => (
+    <Motion style={getAnimationStyle(props)}>
+      {({ xSpring, colorSpring }) => (
+        <Component
+          {...props}
+          translateX={`translate(${xSpring})`}
+          fill={scaleColorSpring(colorSpring)}
+        />
+      )}
+    </Motion>
+  ));

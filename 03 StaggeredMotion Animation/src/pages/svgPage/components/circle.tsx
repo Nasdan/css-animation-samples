@@ -6,7 +6,7 @@ interface Props {
   className?: string;
   translateX?: string;
   fill?: string;
-  onClick?: () => void;
+  onStartAnimation?: () => void;
 }
 
 export const Circle: React.StatelessComponent<Props> = (props) => {
@@ -18,7 +18,7 @@ export const Circle: React.StatelessComponent<Props> = (props) => {
       r={25}
       transform={props.translateX}
       fill={props.fill}
-      onClick={props.onClick}
+      onClick={props.onStartAnimation}
     />
   );
 };

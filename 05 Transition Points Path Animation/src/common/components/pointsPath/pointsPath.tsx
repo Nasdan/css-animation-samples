@@ -9,6 +9,7 @@ interface Point {
 interface Props {
   originPoint: Point;
   nextPoint: Point;
+  opacity?: number;
 }
 
 interface State {
@@ -57,6 +58,7 @@ export class PointsPath extends React.Component<Props, State> {
               y1={this.props.originPoint.y + this.state.points[index - 1].y}
               x2={this.props.originPoint.x + point.x}
               y2={this.props.originPoint.y + point.y}
+              opacity={this.props.opacity}
             />
           ))
         }

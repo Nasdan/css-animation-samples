@@ -5,6 +5,7 @@ interface Props {
   y1: number;
   x2: number;
   y2: number;
+  opacity?: number;
 }
 
 export const LineComponent: React.StatelessComponent<Props> = (props) => {
@@ -14,6 +15,7 @@ export const LineComponent: React.StatelessComponent<Props> = (props) => {
       y1={props.y1}
       x2={props.x2}
       y2={props.y2}
+      opacity={props.opacity}
       strokeWidth={2}
       stroke="black"
     />
